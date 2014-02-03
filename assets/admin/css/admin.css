@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+.no-permission-div{
+	text-align: center;
+	width:50%;
+	
+	height:200px;
+	border:1px solid black;
+	margin: auto;
+	background-color: #ccc;
+}
+.no-permission-div a{
+	text-decoration: none;
+	color: blue;
+}
+.btn-move {
+	color: #A000FF;
+	border: 1px solid #6800A4;
+	background: #A000FF;
+	background: -moz-linear-gradient(top, #A000FF 0%, #6800A4 100%);
+	background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #A000FF
+		), color-stop(100%, #6800A4));
+	background: -webkit-linear-gradient(top, #A000FF 0%, #6800A4 100%);
+	background: -o-linear-gradient(top, #A000FF 0%, #6800A4 100%);
+	background: -ms-linear-gradient(top, #A000FF 0%, #6800A4 100%);
+	background: linear-gradient(top, #A000FF 0%, #6800A4 100%);
+}
+
+.btn-red {
+	color: #fff;
+	border: 1px solid #a95151;
+	background: red;
+	background: -moz-linear-gradient(top, red 0%, #C70000 100%);
+	background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, red),
+		color-stop(100%, #C70000));
+	background: -webkit-linear-gradient(top, red 0%, #C70000 100%);
+	background: -o-linear-gradient(top, red 0%, #C70000 100%);
+	background: -ms-linear-gradient(top, red 0%, #C70000 100%);
+	background: linear-gradient(top, red 0%, #C70000 100%);
+}
+
+a.btn-danger b,a.btn-warning b,a.btn-red b,a.btn-success b,a.btn-primary b,a.btn-info b, a.btn-inverse b, a.btn-move b
+	{
+	color: white !important;
+}
+
+button .btn-primary i {
+	color: white !important;
+}
+
+input[type=text]:focus, textarea:focus {
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+	-moz-box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+	box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+}
+
+input[type=text]:hover, textarea:hover {
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+	-moz-box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+	box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+}
+
+.emoji {
+	cursor: pointer;
+}
+
+#fake_message, .fake_message {
+	height: 90px;
+	display: block;
+	background-color: #FFF;
+	padding: 5px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	font-size: 13px;
+	overflow-y: auto;
+	white-space: pre-wrap;
+}
+
+img.emoji {
+	content: "";
+	cursor: pointer;
+	display: inline-block;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+
+.icons-showcase li {
+	width: 10% !important;
+}
+
+.icons-showcase li {
+	width: 10% !important;
+}
+
+.message-actions .dropdown-menu {
+	min-width: 250px;
+}
+
+.message-actions .btn-group>.dropdown-toggle {
+	padding: 2px !important;
+}

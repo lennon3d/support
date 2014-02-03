@@ -1,0 +1,12 @@
+#container .blocks .block.blue{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c6eef7',GradientType=0 );
+}
+#container .blocks .block.blue-2{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C6EEF6', endColorstr='#F8F8F8',GradientType=0 );
+}
+#container .blocks .block.orange{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F8F8F8', endColorstr='#F7D4BA',GradientType=0 );
+}
+#container .blocks .block.gray{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#DFDDDD',GradientType=0 );
+}

@@ -1,0 +1,7 @@
+#top-container{
+	background: transparent url("../images/top_bg.png") repeat-x scroll left top;
+	padding: 0 4px;
+	*padding: 0 3px;
+	position: relative;
+	z-index: 3;
+}

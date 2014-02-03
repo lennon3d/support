@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'GESS';
+	src: url('GESSTwoBold-Bold.eot?') format('eot'), 
+	     url('GESSTwoBold-Bold.otf')  format('opentype'),
+	     url('GESSTwoBold-Bold.woff') format('woff'), 
+	     url('GESSTwoBold-Bold.ttf')  format('truetype'),
+	     url('GESSTwoBold-Bold.svg#GESSTwoBold-Bold') format('svg');
+	font-weight:700;	 
+}
+
+@font-face {
+	font-family: 'GESS';
+	src: url('GESSTwoMedium-Medium.eot?') format('eot'), 
+	     url('GESSTwoMedium-Medium.otf')  format('opentype'),
+	     url('GESSTwoMedium-Medium.woff') format('woff'), 
+	     url('GESSTwoMedium-Medium.ttf')  format('truetype'),
+	     url('GESSTwoMedium-Medium.svg#GESSTwoMedium-Medium') format('svg');
+	font-weight:400;		 
+}
+
+@font-face {
+	font-family: 'GESS';
+	src: url('GESSTwoLight-Light.eot?') format('eot'), 
+	     url('GESSTwoLight-Light.otf')  format('opentype'),
+	     url('GESSTwoLight-Light.woff') format('woff'), 
+	     url('GESSTwoLight-Light.ttf')  format('truetype'),
+	     url('GESSTwoLight-Light.svg#GESSTwoLight-Light') format('svg');
+	font-weight:300;
+}
+
+

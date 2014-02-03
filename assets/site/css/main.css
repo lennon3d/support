@@ -1,0 +1,222 @@
+﻿/*INTERNET_EXPLORER_6_ERROR*/
+#ie6-error {
+	border: #FFD2E6 solid 2px;
+	margin: 5px;
+	background-color: #FFFDC5;
+	padding: 10px;
+	font-size: 12px;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 500px;
+	display: none;
+	z-index: 9999;
+}
+
+#ie6-error .title {
+	font-weight: bold;
+}
+
+#ie6-error .close {
+	text-align: left;
+	cursor: pointer;
+	font-size: 11px;
+}
+
+#ie6-error a:link,#ie6-error a:visited {
+	display: block;
+	text-decoration: none;
+	color: #A02F09;
+}
+
+#ie6-error a:active,#ie6-error a:hover {
+	text-decoration: underline;
+}
+/*\INTERNET_EXPLORER_6_ERROR*/
+.topnav {
+	float: left;
+	display: block;
+}
+
+.topnav>li {
+	float: right;
+	border-left: 1px solid #444;
+	position: relative;
+}
+
+.topnav>li:first-child {
+	border-right: 1px solid #444;
+}
+
+.topnav>li>a {
+	font-size: 14px;
+	color: #686868;
+	cursor: pointer;
+	display: block;
+	padding: 15px 16px 15px 16px;
+	-webkit-transition: all ease-in-out .15s;
+	transition: all ease-in-out .15s;
+	-moz-transition: all ease-in-out .15s;
+}
+
+.topnav>li>a:hover {
+	background: #FF8D00;
+	color: #d5d5d5;
+	-webkit-transition: all ease-in-out .15s;
+	transition: all ease-in-out .15s;
+	-moz-transition: all ease-in-out .15s;
+	box-shadow: 1px 0 1px #2a2a2a inset, -1px 0 1px #2a2a2a inset;
+	-webkit-box-shadow: 1px 0 1px #2a2a2a inset, -1px 0 1px #2a2a2a inset;
+	-moz-box-shadow: 1px 0 1px #2a2a2a inset, -1px 0 1px #2a2a2a inset;
+}
+
+.topnav li.active a {
+	border-bottom: 1px solid #a6c659;
+	background: #2a2a2a url(../images/toparrow.png) no-repeat 50% 100%;
+	color: #d5d5d5;
+	box-shadow: 1px 0 0 #232323 inset, -1px 0 0 #232323 inset;
+	-webkit-box-shadow: 1px 0 0 #232323 inset, -1px 0 0 #232323 inset;
+	-moz-box-shadow: 1px 0 0 #232323 inset, -1px 0 0 #232323 inset;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header {
+	margin-bottom: 8px;
+}
+
+.ui-timepicker-div dl {
+	text-align: left;
+}
+
+.ui-timepicker-div dl dt {
+	float: left;
+	clear: left;
+	padding: 0 0 0 5px;
+}
+
+.ui-timepicker-div dl dd {
+	margin: 0 10px 10px 45%;
+}
+
+.ui-timepicker-div td {
+	font-size: 90%;
+}
+
+.ui-tpicker-grid-label {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ui-timepicker-rtl {
+	direction: rtl;
+}
+
+.ui-timepicker-rtl dl {
+	text-align: right;
+	padding: 0 5px 0 0;
+}
+
+.ui-timepicker-rtl dl dt {
+	float: right;
+	clear: right;
+}
+
+.ui-timepicker-rtl dl dd {
+	margin: 0 45% 10px 10px;
+}
+
+.btn-move {
+	color: #A000FF;
+	border: 1px solid #6800A4;
+	background: #A000FF;
+	background: -moz-linear-gradient(top, #D16BF9 0%, #9830C1 100%);
+	background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #D16BF9
+		), color-stop(100%, #9830C1));
+	background: -webkit-linear-gradient(top, #D16BF9 0%, #9830C1 100%);
+	background: -o-linear-gradient(top, #D16BF9 0%, #9830C1 100%);
+	background: -ms-linear-gradient(top, #D16BF9 0%, #9830C1 100%);
+	background: linear-gradient(top, #D16BF9 0%, #9830C1 100%);
+}
+
+.btn-red {
+	color: #fff;
+	border: 1px solid #a95151;
+	background: red;
+	background: -moz-linear-gradient(top, red 0%, #C70000 100%);
+	background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, red),
+		color-stop(100%, #C70000));
+	background: -webkit-linear-gradient(top, red 0%, #C70000 100%);
+	background: -o-linear-gradient(top, red 0%, #C70000 100%);
+	background: -ms-linear-gradient(top, red 0%, #C70000 100%);
+	background: linear-gradient(top, red 0%, #C70000 100%);
+}
+
+a.btn-danger b,a.btn-warning b,a.btn-red b,a.btn-success b,a.btn-primary b,a.btn-info b,a.btn-inverse b,a.btn-move b
+	{
+	color: white !important;
+}
+
+button .btn-primary i {
+	color: white !important;
+}
+
+input[type=text]:focus,textarea:focus {
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+	-moz-box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+	box-shadow: 0px 0px 2px rgba(0, 100, 0, 0.73);
+}
+
+input[type=text]:hover,textarea:hover {
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+	-moz-box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+	box-shadow: 0px 0px 2px rgba(0, 0, 255, 0.73);
+}
+
+.emoji {
+	cursor: pointer;
+}
+
+#fake_message, .fake_message {
+	height: 90px;
+	display: block;
+	background-color: #FFF;
+	padding: 5px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	font-size: 13px;
+	overflow-y: auto;
+	white-space: pre-wrap;
+}
+
+img.emoji {
+	content: "";
+	cursor: pointer;
+	display: inline-block;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+
+.icons-showcase li {
+	width: 10% !important;
+}
+
+.message-actions .dropdown-menu {
+	min-width: 250px;
+}
+
+.message-actions .btn-group>.dropdown-toggle {
+	padding: 2px !important;
+}
+
+textarea.max580{
+	max-width:580px;
+}
