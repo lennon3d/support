@@ -75,4 +75,10 @@ class ChatModel extends CI_Model
             "datetime" => time()
         ));
     }
+
+    // request new chat
+    public function requestChat($atts = array())
+    {
+        return $this->db->insert(self::TABLE, $atts);
+    }
 }

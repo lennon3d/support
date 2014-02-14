@@ -23,12 +23,12 @@
 <tr>
 	<td><input class="style" type="checkbox" name="contacts[]" value="<?=$contact->id?>"/></td>
 	<td><?=$contact->name?></td>
-	<td><?=date("Y-m-d s:i a",$contact->datetime)?></td>
+	<td><?=date("Y-m-d h:i a",$contact->datetime)?></td>
 	<td><?=$contact->email?></td>
 	<td><?=$contact->mobile?></td>
 	<td>
 		<ul class="table-controls">
-		<?php if($permissions->contacts_reply["see"] == "1"){?>	
+		<?php if($permissions->contacts_reply["see"] == "1"){?>
 			<li><a href="<?=base_url()?>admin/contacts/showContactus/<?=$contact->id?>" class="btn hovertip btn-success" title="<?=lang("show_contactus")?>"><b class="font-file"></b></a> </li>
 		<?php }?>
 		</ul>

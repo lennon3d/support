@@ -1,5 +1,4 @@
 <?php
-
 if (! defined('BASEPATH'))
     exit('No direct script access allowed');
     // common admin controller
@@ -137,8 +136,8 @@ class SiteController extends CI_Controller
                 "captcha" => rand(10000, 99999)
             ));
         }
-        if($this->uri->segment(2) == "cp" && !$this->session->userdata("validated"))
-            redirect($this->SITE_URL."user/login");
+        if ($this->uri->segment(2) == "cp" && ! $this->session->userdata("validated"))
+            redirect($this->SITE_URL . "user/login");
         $this->js = array();
         $this->css = array();
     }
@@ -249,5 +248,48 @@ class SiteController extends CI_Controller
                 "current_page" => $this->REFERER
             ));
         }
+    }
+}
+
+class OperatorController extends CI_Controller
+{
+
+    var $LANG;
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->checkLang();
+    }
+
+    // check language request
+    function checkLang()
+    {
+        $lang = $this->input->get_post("lang");
+        $this->LANG = $this->langCode($lang);
+        $this->lang->load("cp_$this->LANG", "cp_$this->LANG");
+    }
+
+    // return json object of status message
+    public function status($message, $st = 0)
+    {
+        $status_a = array();
+        $status_a["code"] = $st;
+        $status_a["message"] = $message;
+        return json_encode($status_a);
+    }
+
+    // get languages array code
+    public function langCode($code)
+    {
+        $def_lang = "en";
+        $array = array(
+            "ar",
+            "en",
+            "fr",
+            "ch",
+            "sp"
+        );
+        return (in_array($code, $array) ? $code : $def_lang);
     }
 }

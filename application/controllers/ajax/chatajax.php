@@ -17,23 +17,23 @@ class ChatAjax extends CI_Controller
         $this->LANG = ($this->op->langCode($this->input->get_post("lang")) ? $this->input->get_post("lang") : "ar");
         $this->lang->load("cp_$this->LANG", "cp_$this->LANG");
         $this->checkUser();
-        header('Content-Type: text/html; charset=utf-8');
+        //header('Content-Type: text/html; charset=utf-8');
     }
 
     // send chat message
     public function sendMessage()
     {
-        $user = $this->input->get_post("username");
+        $email = $this->input->get_post("email");
         $chat_id = $this->input->get_post("chat");
         $message = $this->input->get_post("message");
-        if (! $user || empty($user))
-            exit($this->status(lang("no_user"), "117")); // no user
+        if (! $email || empty($email))
+            exit($this->status(lang("no_user"), 117)); // no user
         if (! $chat_id || empty($chat_id))
-            exit($this->status(lang("no_chat_id"), "118")); // no chat id
+            exit($this->status(lang("no_chat_id"), 118)); // no chat id
         if (! $message || empty($message))
-            exit($this->status(lang("no_message"), "119")); // no message
-        $this->chat->sendMessage($user, $chat_id, $message);
-        exit($this->status(lang("message_sent"), "120"));
+            exit($this->status(lang("no_message"), 119)); // no message
+        $this->chat->sendMessage($email, $chat_id, $message);
+        exit($this->status(lang("message_sent"), 120));
     }
 
     // get all active chats and message of operator
@@ -42,7 +42,7 @@ class ChatAjax extends CI_Controller
         $chats_array = array();
         $chats = $this->chat->getActiveChats($this->OPERATOR);
         if (! $chats)
-            exit($this->status(lang("no_chats"), "115")); // no active chats
+            exit($this->status(lang("no_chats"), 115)); // no active chats
         foreach ($chats as $chat) {
             $messages = $this->chat->getChatMessages($chat->id);
             array_push($chats_array, array(
@@ -51,7 +51,7 @@ class ChatAjax extends CI_Controller
             ));
         }
         exit(json_encode(array(
-            "code" => "116",
+            "code" => 116,
             "chats" => $chats_array
         )));
     }
@@ -101,26 +101,22 @@ class ChatAjax extends CI_Controller
 
     private function checkUser()
     {
-        $username = $this->input->get_post("username");
+        $email = $this->input->get_post("email");
         $password = $this->input->get_post("password");
-        $operator = $this->input->get_post("operator");
-        $this->OPERATOR = $operator;
-        if (! $operator || empty($operator))
-            exit($this->status(lang("no_operator"), "111")); // no operator
-        if (! $username || empty($username))
-            exit($this->status(lang("no_username"), "112")); // no username
+        if (! $email || empty($email))
+            exit($this->status(lang("no_username"), 112)); // no username
         if (! $password || empty($password))
-            exit($this->status(lang("no_password"), "113")); // no password
-        $check = $this->op->checkUser($operator, $username, $password);
-        if ($check == "-1")
+            exit($this->status(lang("no_password"), 113)); // no password
+        $check = $this->op->checkUser($email, $password);
+        if ($check == -1)
             exit($this->status(lang("no_operator"), $check)); // no operator match
-        if ($check == "-2")
+        if ($check == -2)
             exit($this->status(lang("operator_inactive"), $check)); // operator inactive
-        if ($check == "-3")
+        if ($check == -3)
             exit($this->status(lang("invalid_login"), $check)); // operator user not match
-        if ($check == "-4")
+        if ($check == -4)
             exit($this->status(lang("user_inactive"), $check)); // user inactive
-        if ($check == "-5")
+        if ($check == -5)
             exit($this->status(lang("invalid_login"), $check)); // wrong password
     }
 
@@ -131,5 +127,29 @@ class ChatAjax extends CI_Controller
         $status_a["code"] = $st;
         $status_a["message"] = $message;
         return json_encode($status_a);
+    }
+
+    // request new chat
+    public function requestChat()
+    {
+        $mobile = $this->input->get_post("mobile");
+        $email = $this->input->get_post("email");
+        $name = $this->input->get_post("name");
+        $operator = $this->input->get_post("operator");
+        $req = $this->chat->requestChat(array(
+            "mobile" => $mobile,
+            "email" => $email,
+            "name" => $name,
+            "operator" => $operator,
+            "accepted" => 0,
+            "datetime" => time(),
+            "user" => 0,
+            "status" => 1,
+            "rate" => 0
+        ));
+        if ($req)
+            exit($this->status(lang("request_chat_success"), 121));
+        else
+            exit($this->status(lang("request_chat_failed"), 122));
     }
 }
